@@ -274,6 +274,15 @@ minute = minute.merge(
     how="left"
 )
 
+# Causal timestamp convention:
+# each row summarizes the preceding wall-clock minute.
+# The feature vector is considered available at the
+# start of the following minute.
+minute["timestamp"] = (
+    minute["timestamp"]
+    + pd.Timedelta(minutes=1)
+)
+
 
 # ============================================================
 # CLEAN STANDARD-DEVIATION NaNs
@@ -500,3 +509,4 @@ print("\nSaved:")
 print(OUT_PATH)
 
 print("\nBUILD COMPLETE")
+

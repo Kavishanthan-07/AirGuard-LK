@@ -1,0 +1,16 @@
+{
+  "candidate_horizons": [
+    15,
+    30,
+    60,
+    120
+  ],
+  "event_neighborhood_minutes": 360,
+  "development_folds": [
+    "fold_F02",
+    "fold_F03"
+  ],
+  "final_holdout_split": "final_F04",
+  "final_holdout_event": "F04",
+  "membership_rows": 1933740
+}
