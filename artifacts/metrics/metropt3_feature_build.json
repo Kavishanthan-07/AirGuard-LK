@@ -1,0 +1,9 @@
+{
+  "rows": 252720,
+  "feature_count": 264,
+  "max_history_minutes": 120,
+  "continuous_segments": 332,
+  "rows_with_120m_history": 225765,
+  "rows_with_120m_history_and_all_features": 225765,
+  "data_quality_columns_used_as_model_features": false
+}
