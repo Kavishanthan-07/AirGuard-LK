@@ -1,0 +1,4 @@
+metric,value
+tp3_reservoir_correlation,0.9999933936786731
+tp3_reservoir_mean_abs_difference_bar,0.0018621020628261512
+tp3_reservoir_p95_abs_difference_bar,0.004000000000001336
