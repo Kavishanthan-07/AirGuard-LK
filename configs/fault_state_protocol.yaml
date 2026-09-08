@@ -1,0 +1,40 @@
+﻿project: AirGuard-LK
+
+task:
+  name: chronological_fault_state_detection
+  description: Detect documented MetroPT-3 air-leak state using earlier leak events.
+
+  pre_event_exclusion_minutes: 360
+  post_event_recovery_minutes: 360
+
+evaluation:
+  strategy: chronological_event_walk_forward
+
+  development_folds:
+    - training_events: [F01]
+      validation_event: F02
+    - training_events: [F01, F02]
+      validation_event: F03
+
+  final_holdout_event: F04
+
+  primary_metrics:
+    - event_detection_rate
+    - detection_delay_minutes
+    - false_alarm_episodes_per_day
+
+  secondary_metrics:
+    - pr_auc
+    - average_precision
+    - roc_auc
+
+alerting:
+  persistence_minutes: 3
+
+  training_normal_quantiles:
+    - 0.99
+    - 0.995
+    - 0.999
+    - 0.9995
+
+random_seed: 42
