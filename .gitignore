@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+
+# Virtual environment
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Raw / generated datasets
+data/raw/*
+data/external/*
+data/interim/*
+data/processed/*
+
+# Keep directory placeholders
+!data/raw/.gitkeep
+!data/external/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# Logs
+artifacts/logs/*.log
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# Large generated model files
+*.pkl
+*.joblib
+*.bin

@@ -1,0 +1,16 @@
+numpy
+pandas
+scipy
+scikit-learn
+lightgbm
+xgboost
+shap
+matplotlib
+plotly
+pyarrow
+joblib
+pyyaml
+tqdm
+psutil
+jupyterlab
+ipykernel

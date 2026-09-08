@@ -1,0 +1,40 @@
+project:
+  name: AirGuard-LK
+  competition: OctWave 3.0
+  track: Industrial Safety, Reliability & Resilience
+
+random_seed: 42
+
+data:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+
+time_series:
+  aggregation: null
+  warning_horizon_minutes: null
+
+split:
+  strategy: chronological
+  train_end: null
+  validation_end: null
+  test_end: null
+
+features:
+  lags: []
+  rolling_windows: []
+
+model:
+  baseline: logistic_regression
+  main: lightgbm
+
+evaluation:
+  primary_metric: pr_auc
+  report:
+    - precision
+    - recall
+    - f1
+    - pr_auc
+    - event_detection_rate
+    - median_warning_minutes
+    - false_alarms_per_day
