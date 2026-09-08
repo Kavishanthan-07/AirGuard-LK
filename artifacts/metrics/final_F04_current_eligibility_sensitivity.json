@@ -1,0 +1,22 @@
+{
+  "analysis_type": "post_hoc_eligibility_sensitivity",
+  "model_retrained": false,
+  "threshold_changed": false,
+  "model": "LightGBM Current",
+  "frozen_threshold": 0.6071059893996522,
+  "persistence_minutes": 3,
+  "f04_event_clock_rows": 270,
+  "strict_primary_fault_rows": 173,
+  "current_feature_eligible_fault_rows": 269,
+  "additional_fault_rows_scored": 96,
+  "holdout_normal_minutes": 43885,
+  "holdout_failure_minutes": 269,
+  "positive_prevalence": 0.00609231326720116,
+  "pr_auc": 0.5534513233160238,
+  "average_precision": 0.5537566615597554,
+  "roc_auc": 0.9703368427026873,
+  "event_detected": 1,
+  "detection_delay_minutes": 150.0,
+  "false_alarm_episodes": 0,
+  "false_alarm_episodes_per_day": 0.0
+}
