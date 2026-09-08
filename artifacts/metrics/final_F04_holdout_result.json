@@ -1,0 +1,31 @@
+{
+  "holdout_event": "F04",
+  "training_events": [
+    "F01",
+    "F02",
+    "F03"
+  ],
+  "frozen_config_sha256": "17d0d435e34e677f55269cb797e6312edefcb2c53a0635a331f2e7558699f265",
+  "model": "LightGBM Current",
+  "feature_count": 71,
+  "threshold_quantile": 0.9995,
+  "threshold_value": 0.6071059893996522,
+  "persistence_minutes": 3,
+  "holdout_normal_minutes": 39155,
+  "holdout_failure_minutes": 173,
+  "positive_prevalence": 0.004398901545972335,
+  "pr_auc": 0.27540014554139336,
+  "average_precision": 0.2762197861179089,
+  "roc_auc": 0.951232355769976,
+  "ap_lift_over_prevalence": 62.792900280029606,
+  "event_detected": 1,
+  "detection_delay_minutes": 150.0,
+  "false_alarm_episodes": 0,
+  "false_alarm_episodes_per_day": 0.0,
+  "pre_event_warning_minutes": null,
+  "first_alert_relative_to_event_minutes": 150.0,
+  "detected_within_5m": 0,
+  "detected_within_15m": 0,
+  "detected_within_30m": 0,
+  "detected_within_60m": 0
+}
