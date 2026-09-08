@@ -1,0 +1,16 @@
+sensor,signal_type,unit,group,meaning,airguard_role
+TP2,analogue,bar,pressure,Pressure measured at the compressor.,Compressor pressure behaviour
+TP3,analogue,bar,pressure,Pressure generated at the pneumatic panel.,System/pneumatic pressure behaviour
+H1,analogue,bar,pressure,Pressure associated with the cyclonic separator filter discharge.,Separator/discharge pressure behaviour
+DV_pressure,analogue,bar,pressure,Pressure drop associated with air-dryer tower discharge.,Dryer/compressor loading behaviour
+Reservoirs,analogue,bar,pressure,Downstream reservoir pressure; normally close to TP3.,Stored-air pressure and pressure recovery
+Oil_temperature,analogue,degC,temperature,Compressor oil temperature.,Thermal operating condition
+Motor_current,analogue,A,electrical,Current measured from one phase of the compressor motor.,Motor loading and compressor activity
+COMP,digital,binary,control,Air-intake-valve electrical signal.,Compressor operating-state context
+DV_eletric,digital,binary,control,Electrical signal controlling the compressor outlet valve.,Loaded/offloaded state context
+Towers,digital,binary,control,Indicates which air-drying tower is operating.,Dryer operating-state context
+MPG,digital,binary,control,Control signal involved in starting compressor operation under load.,Compression-cycle context
+LPS,digital,binary,protection,Low-pressure signal that activates below approximately 7 bar.,Low-pressure condition
+Pressure_switch,digital,binary,control,Signal associated with discharge of the air-drying towers.,Dryer discharge state
+Oil_level,digital,binary,protection,Signal that activates when compressor oil is below the expected level.,Oil-level condition
+Caudal_impulses,digital,binary/pulse,flow,Pulse signal associated with air flow from the APU to the reservoirs.,Air-flow activity

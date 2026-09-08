@@ -1,0 +1,17 @@
+column,dtype,unique_values,missing_values
+timestamp,datetime64[us],1516948,0
+TP2,float64,5257,0
+TP3,float64,3683,0
+H1,float64,2665,0
+DV_pressure,float64,2257,0
+Reservoirs,float64,3682,0
+Oil_temperature,float64,2462,0
+Motor_current,float64,1809,0
+COMP,float64,2,0
+DV_eletric,float64,2,0
+Towers,float64,2,0
+MPG,float64,2,0
+LPS,float64,2,0
+Pressure_switch,float64,2,0
+Oil_level,float64,2,0
+Caudal_impulses,float64,2,0

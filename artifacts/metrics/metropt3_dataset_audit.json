@@ -1,0 +1,32 @@
+{
+  "dataset": "MetroPT-3",
+  "rows": 1516948,
+  "columns_after_index_removal": 16,
+  "timestamp_start": "2020-02-01 00:00:00",
+  "timestamp_end": "2020-09-01 03:59:50",
+  "invalid_timestamps": 0,
+  "duplicate_rows": 0,
+  "duplicate_timestamps": 0,
+  "total_missing_values": 0,
+  "numeric_signal_count": 15,
+  "sampling": {
+    "median_seconds": 10.0,
+    "mean_seconds": 12.141221809331507,
+    "min_seconds": 8.0,
+    "p01_seconds": 9.0,
+    "p05_seconds": 9.0,
+    "p95_seconds": 10.0,
+    "p99_seconds": 12.0,
+    "max_seconds": 172918.0
+  },
+  "timestamp_gap_counts": {
+    "gaps_over_10s": 51147,
+    "gaps_over_20s": 351,
+    "gaps_over_30s": 331,
+    "gaps_over_60s": 331,
+    "gaps_over_120s": 327,
+    "gaps_over_300s": 275,
+    "gaps_over_600s": 230,
+    "gaps_over_3600s": 160
+  }
+}

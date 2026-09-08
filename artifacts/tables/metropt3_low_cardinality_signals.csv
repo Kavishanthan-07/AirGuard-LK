@@ -1,0 +1,9 @@
+column,unique_count,values
+COMP,2,"[0.0, 1.0]"
+DV_eletric,2,"[0.0, 1.0]"
+Towers,2,"[0.0, 1.0]"
+MPG,2,"[0.0, 1.0]"
+LPS,2,"[0.0, 1.0]"
+Pressure_switch,2,"[0.0, 1.0]"
+Oil_level,2,"[0.0, 1.0]"
+Caudal_impulses,2,"[0.0, 1.0]"
