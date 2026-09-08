@@ -1,0 +1,2 @@
+model,mean_pr_auc,minimum_event_pr_auc,maximum_event_pr_auc,mean_average_precision,mean_roc_auc,mean_ap_lift
+TinyCNN-30m,0.6344530276577458,0.5342216776828789,0.7346843776326129,0.4210447302134499,0.8575419558807098,6.759255520086324

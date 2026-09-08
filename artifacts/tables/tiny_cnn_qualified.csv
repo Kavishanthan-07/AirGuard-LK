@@ -1,0 +1,5 @@
+model,threshold_quantile,events_detected,median_detection_delay_minutes,mean_false_alarms_per_day,worst_false_alarms_per_day,events_total
+TinyCNN-30m,0.99,2,1.0,0.5036140458241304,0.6812805551174894,2
+TinyCNN-30m,0.995,2,1.0,0.24030413450377042,0.25351475063504436,2
+TinyCNN-30m,0.999,2,3.0,1.2905795299918115,2.3540655416111265,2
+TinyCNN-30m,0.9995,2,3.0,0.5843598675084736,0.9416262166444506,2

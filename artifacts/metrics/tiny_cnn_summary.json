@@ -1,0 +1,14 @@
+{
+  "model": "TinyCNN-30m",
+  "device": "cpu",
+  "torch_version": "2.14.0+cpu",
+  "development_events": [
+    "F02",
+    "F03"
+  ],
+  "F04_used_for_selection": false,
+  "sequence_length_minutes": 30,
+  "channel_count": 18,
+  "epochs": 15,
+  "qualified_configuration_count": 4
+}
