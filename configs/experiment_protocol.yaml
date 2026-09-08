@@ -1,0 +1,77 @@
+﻿project: AirGuard-LK
+competition: OctWave 3.0
+
+evaluation:
+  strategy: chronological_event_walk_forward
+
+  final_holdout_event: F04
+
+  disclosure:
+    final_holdout_seen_in_dataset_eda: true
+    final_holdout_used_for_model_fitting: false
+    final_holdout_used_for_feature_selection: false
+    final_holdout_used_for_hyperparameter_tuning: false
+    final_holdout_used_for_threshold_selection: false
+
+target:
+  candidate_warning_horizons_minutes:
+    - 15
+    - 30
+    - 60
+    - 120
+
+  event_neighborhood_minutes: 360
+
+  failure_rows_used_for_classifier: false
+
+  ambiguous_prefault_rows_used_as_negative: false
+
+  post_failure_recovery_rows_used_as_negative: false
+
+features:
+  maximum_history_minutes: 120
+  require_complete_history: true
+
+  quality_metadata_as_features: false
+
+development_folds:
+
+  - name: fold_F02
+    training_events:
+      - F01
+    validation_event: F02
+
+  - name: fold_F03
+    training_events:
+      - F01
+      - F02
+    validation_event: F03
+
+final_fit:
+  training_events:
+    - F01
+    - F02
+    - F03
+  holdout_event: F04
+
+selection:
+  use_only_development_folds_for:
+    - warning_horizon
+    - feature_configuration
+    - model_family
+    - hyperparameters
+    - class_weight
+    - decision_threshold
+
+primary_metrics:
+  - event_detection_rate
+  - warning_time_minutes
+  - false_alarm_episodes_per_day
+
+secondary_metrics:
+  - pr_auc
+  - precision
+  - recall
+  - f1
+
+random_seed: 42
