@@ -1,0 +1,60 @@
+﻿project: AirGuard-LK
+experiment: gru_30m_challenger
+
+status:
+  challenger_is_post_hoc_exploratory: true
+  F04_used_for_selection: false
+
+sequence:
+  length_minutes: 30
+
+  channels:
+    - TP2_mean
+    - TP3_mean
+    - H1_mean
+    - DV_pressure_mean
+    - Reservoirs_mean
+    - Oil_temperature_mean
+    - Motor_current_mean
+    - COMP_mean
+    - DV_eletric_mean
+    - Towers_mean
+    - MPG_mean
+    - LPS_mean
+    - Pressure_switch_mean
+    - Oil_level_mean
+    - Caudal_impulses_mean
+    - COMP_MPG_mismatch_mean
+    - COMP_DV_equal_mean
+    - TP3_Reservoir_abs_diff_mean
+
+model:
+  architecture: GRU
+  hidden_size: 32
+  num_layers: 1
+  dense_hidden: 16
+  dropout: 0.20
+
+training:
+  epochs: 15
+  batch_size: 512
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  optimizer: AdamW
+  loss: BCEWithLogitsLoss
+  class_weight: training_fold_pos_weight
+  early_stopping_on_validation_event: false
+
+alerting:
+  threshold_quantiles:
+    - 0.99
+    - 0.995
+    - 0.999
+    - 0.9995
+  persistence_minutes: 3
+
+selection:
+  required_events_detected: 2
+  maximum_median_detection_delay_minutes: 5
+
+random_seed: 42
