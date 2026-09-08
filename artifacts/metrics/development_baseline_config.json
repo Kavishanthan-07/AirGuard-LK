@@ -1,0 +1,25 @@
+{
+  "development_splits": [
+    "fold_F02",
+    "fold_F03"
+  ],
+  "candidate_horizons_minutes": [
+    15,
+    30,
+    60,
+    120
+  ],
+  "models": [
+    "Static Normal-Range",
+    "Logistic Current",
+    "Logistic Temporal"
+  ],
+  "static_features": 7,
+  "current_features": 71,
+  "temporal_features": 264,
+  "persistence_minutes": 3,
+  "logistic_class_weight": "balanced",
+  "logistic_C": 1.0,
+  "decision_threshold_logistic": 0.5,
+  "final_holdout_used": false
+}
