@@ -1133,19 +1133,11 @@ for minutes in [
     )
 
     detected = bool(
-        (
-            failure[
-                "timestamp"
-            ]
-            <= deadline
-        )
-        &
-        (
-            failure[
-                "alert"
-            ]
-        )
-    ).any()
+    failure.loc[
+        failure["timestamp"] <= deadline,
+        "alert",
+    ].any()
+    )
 
     checkpoint_results[
         f"detected_within_{minutes}m"
@@ -1382,3 +1374,4 @@ print(
     "Do not tune the model based on "
     "this result."
 )
+
