@@ -1,0 +1,10 @@
+{
+  "rows": 252720,
+  "documented_failure_events": 4,
+  "failure_minutes": 4960,
+  "pre_15m_minutes": 60,
+  "pre_30m_minutes": 120,
+  "pre_60m_minutes": 240,
+  "pre_120m_minutes": 480,
+  "pre_360m_minutes": 1440
+}
