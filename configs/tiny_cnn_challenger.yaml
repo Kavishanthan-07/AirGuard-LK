@@ -1,0 +1,69 @@
+﻿project: AirGuard-LK
+experiment: tiny_cnn_challenger
+
+status:
+  challenger_is_post_hoc_exploratory: true
+  F04_used_for_selection: false
+
+task:
+  name: chronological_fault_state_detection
+
+sequence:
+  length_minutes: 30
+
+  channels:
+    - TP2_mean
+    - TP3_mean
+    - H1_mean
+    - DV_pressure_mean
+    - Reservoirs_mean
+    - Oil_temperature_mean
+    - Motor_current_mean
+    - COMP_mean
+    - DV_eletric_mean
+    - Towers_mean
+    - MPG_mean
+    - LPS_mean
+    - Pressure_switch_mean
+    - Oil_level_mean
+    - Caudal_impulses_mean
+    - COMP_MPG_mismatch_mean
+    - COMP_DV_equal_mean
+    - TP3_Reservoir_abs_diff_mean
+
+model:
+  architecture: TinyCNN1D
+  conv1_filters: 32
+  conv2_filters: 64
+  kernel1: 5
+  kernel2: 3
+  hidden_units: 32
+  dropout: 0.20
+
+training:
+  epochs: 15
+  batch_size: 512
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  optimizer: AdamW
+  loss: BCEWithLogitsLoss
+  class_weight: training_fold_pos_weight
+  early_stopping_on_validation_event: false
+
+alerting:
+  threshold_quantiles:
+    - 0.99
+    - 0.995
+    - 0.999
+    - 0.9995
+  persistence_minutes: 3
+
+selection:
+  required_events_detected: 2
+  maximum_median_detection_delay_minutes: 5
+  priority:
+    - lowest_worst_false_alarm_rate
+    - highest_minimum_event_pr_auc
+    - highest_mean_pr_auc
+
+random_seed: 42
