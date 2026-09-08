@@ -1,0 +1,74 @@
+﻿project: AirGuard-LK
+experiment: ensemble_challenger
+
+status:
+  primary_frozen_model_already_evaluated_on_F04: true
+  challenger_is_post_hoc_exploratory: true
+  F04_used_for_challenger_selection: false
+
+task:
+  name: chronological_fault_state_detection
+
+development:
+  folds:
+    - fault_F02
+    - fault_F03
+
+models:
+  base:
+    - LightGBM Current
+    - XGBoost Current
+    - Random Forest Current
+    - Isolation Forest Current
+
+  ensembles:
+    - name: LGBM_XGB_50_50
+      mode: weighted
+      components:
+        LightGBM Current: 0.5
+        XGBoost Current: 0.5
+
+    - name: LGBM_IF_80_20
+      mode: weighted
+      components:
+        LightGBM Current: 0.8
+        Isolation Forest Current: 0.2
+
+    - name: LGBM_XGB_IF_40_40_20
+      mode: weighted
+      components:
+        LightGBM Current: 0.4
+        XGBoost Current: 0.4
+        Isolation Forest Current: 0.2
+
+    - name: MAX_LGBM_IF
+      mode: maximum
+      components:
+        - LightGBM Current
+        - Isolation Forest Current
+
+score_normalization:
+  method: training_normal_empirical_percentile
+
+alerting:
+  threshold_quantiles:
+    - 0.99
+    - 0.995
+    - 0.999
+    - 0.9995
+
+  persistence_minutes: 3
+
+selection_rule:
+  required_events_detected: 2
+  maximum_median_detection_delay_minutes: 5
+
+  priority:
+    - lowest_worst_false_alarm_rate
+    - highest_minimum_event_pr_auc
+    - highest_mean_pr_auc
+    - simpler_model_if_performance_is_similar
+
+  meaningful_pr_auc_gain_for_extra_complexity: 0.02
+
+random_seed: 42
