@@ -1,0 +1,13 @@
+split,model_a,model_b,spearman_correlation
+fault_F02,LightGBM Current,XGBoost Current,0.7512345374477704
+fault_F02,LightGBM Current,Random Forest Current,0.8193259329288339
+fault_F02,Random Forest Current,XGBoost Current,0.6384046373335233
+fault_F02,Isolation Forest Current,LightGBM Current,0.7494782109723889
+fault_F02,Isolation Forest Current,XGBoost Current,0.514090174129993
+fault_F02,Isolation Forest Current,Random Forest Current,0.6172723764060475
+fault_F03,LightGBM Current,XGBoost Current,0.9032096766423221
+fault_F03,LightGBM Current,Random Forest Current,0.8832098246997394
+fault_F03,Random Forest Current,XGBoost Current,0.8042260609826813
+fault_F03,Isolation Forest Current,LightGBM Current,0.8294258165676591
+fault_F03,Isolation Forest Current,XGBoost Current,0.8046104107302449
+fault_F03,Isolation Forest Current,Random Forest Current,0.6904868478630968

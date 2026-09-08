@@ -1,0 +1,13 @@
+{
+  "experiment": "ensemble_challenger",
+  "development_events": [
+    "F02",
+    "F03"
+  ],
+  "F04_used_for_selection": false,
+  "feature_count": 71,
+  "score_normalization": "training_normal_empirical_percentile",
+  "persistence_minutes": 3,
+  "candidate_count": 8,
+  "qualified_configuration_count": 16
+}
