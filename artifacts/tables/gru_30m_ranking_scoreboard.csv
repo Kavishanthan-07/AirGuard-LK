@@ -1,0 +1,2 @@
+model,mean_pr_auc,minimum_event_pr_auc,maximum_event_pr_auc,mean_average_precision,mean_roc_auc,mean_ap_lift
+GRU-30m,0.5207577449132516,0.08865156476219611,0.9528639250643071,0.5209667240007478,0.9728314147028196,6.19132622967304

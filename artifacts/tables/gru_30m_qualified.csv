@@ -1,0 +1,4 @@
+model,threshold_quantile,events_detected,median_detection_delay_minutes,mean_false_alarms_per_day,worst_false_alarms_per_day,events_total
+GRU-30m,0.99,2,2.5,0.693009046352064,1.1589245743316314,2
+GRU-30m,0.995,2,3.0,0.693009046352064,1.1589245743316314,2
+GRU-30m,0.999,2,4.5,0.7884476090643805,1.122708181383768,2
