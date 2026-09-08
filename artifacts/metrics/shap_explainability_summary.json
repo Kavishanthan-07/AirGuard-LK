@@ -1,0 +1,23 @@
+{
+  "analysis": "post_hoc_shap_explainability",
+  "model_changed": false,
+  "threshold_changed": false,
+  "frozen_threshold": 0.6071059893996522,
+  "persistence_minutes": 3,
+  "f04_rows_explained": 269,
+  "f04_first_persistent_alert": "2020-07-15 17:00:00",
+  "f04_detection_delay_minutes": 150.0,
+  "f04_top_features": [
+    "DV_pressure_min",
+    "Motor_current_x_COMP1",
+    "Oil_temperature_min",
+    "H1_std",
+    "DV_pressure_max",
+    "DV_pressure_mean",
+    "Oil_temperature_mean",
+    "DV_pressure_last",
+    "TP3_minus_Reservoirs_mean",
+    "Oil_temperature_max"
+  ],
+  "note": "SHAP values are model explanations, not evidence of physical causation."
+}
