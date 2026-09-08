@@ -1,0 +1,10 @@
+metric,value
+raw_rows,1516948.0
+minute_rows,252720.0
+segments,332.0
+low_sample_minutes,220.0
+minutes_with_raw_gap_over_30s,331.0
+median_samples_per_minute,6.0
+mean_samples_per_minute,6.002484963596075
+min_samples_per_minute,1.0
+max_samples_per_minute,7.0

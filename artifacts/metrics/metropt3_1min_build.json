@@ -1,0 +1,11 @@
+{
+  "raw_rows": 1516948,
+  "minute_rows": 252720,
+  "columns": 71,
+  "timestamp_start": "2020-02-01 00:00:00",
+  "timestamp_end": "2020-09-01 03:59:00",
+  "segments": 332,
+  "low_sample_minutes": 220,
+  "minutes_with_raw_gap_over_30s": 331,
+  "median_samples_per_minute": 6.0
+}
