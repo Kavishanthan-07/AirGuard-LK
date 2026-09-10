@@ -31,6 +31,7 @@ data/processed/*
 
 # Logs
 artifacts/logs/*.log
+artifacts/*
 
 # Temporary files
 *.tmp
