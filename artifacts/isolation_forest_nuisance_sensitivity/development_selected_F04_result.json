@@ -1,0 +1,20 @@
+{
+  "status": "post-hoc descriptive F04 result",
+  "candidate_selected_without_F04_event_outcome": true,
+  "F04": {
+    "event_id": "F04",
+    "event_start": "2020-07-15 14:30:00",
+    "preferred_status": "STRICT_EARLY",
+    "strict_new_early_detected": 1,
+    "strict_first_early_alert": "2020-07-14 22:45:00",
+    "strict_early_lead_minutes": 945.0,
+    "overlapping_early_detected": 1,
+    "overlap_episode_start": "2020-07-14 22:45:00",
+    "overlap_already_active_at_24h_boundary": 0,
+    "late_detected": 1,
+    "first_late_alert": "2020-07-15 12:30:00",
+    "late_alert_relative_to_start_minutes": -120.0,
+    "threshold_quantile": 0.9995,
+    "persistence_label": "3-of-4"
+  }
+}

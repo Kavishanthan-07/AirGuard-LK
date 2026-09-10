@@ -1,0 +1,42 @@
+{
+  "status": "post-hoc nuisance-control sensitivity",
+  "model_retrained": false,
+  "feature_representation_changed": false,
+  "ewma_alpha_changed": false,
+  "grid": {
+    "threshold_quantiles": [
+      0.995,
+      0.999,
+      0.9995
+    ],
+    "persistence_rules": [
+      "3-of-4",
+      "4-of-4"
+    ]
+  },
+  "selection_uses_F04_event_outcome": false,
+  "selection_rule": [
+    "maximize F01-F03 strict-new-early detections",
+    "minimize development false-alert episodes/day",
+    "minimize development policy time in alert",
+    "prefer higher threshold",
+    "prefer stricter persistence"
+  ],
+  "candidate": {
+    "threshold_quantile": 0.9995,
+    "threshold": 2.060435077784195,
+    "persistence_required": 3,
+    "persistence_window": 4,
+    "persistence_label": "3-of-4",
+    "strict_new_early_all": 4,
+    "strict_new_early_dev_F01_F03": 3,
+    "false_alert_episodes_all": 142,
+    "false_alert_episodes_per_day_all": 1.051743647772863,
+    "policy_time_in_alert_pct_all": 34.84447061132372,
+    "persistent_time_in_alert_pct_all": 70.05936610734962,
+    "false_alert_episodes_dev": 103,
+    "false_alert_episodes_per_day_dev": 1.0522880454061725,
+    "policy_time_in_alert_pct_dev": 29.700016758840285,
+    "total_policy_episodes": 150
+  }
+}
