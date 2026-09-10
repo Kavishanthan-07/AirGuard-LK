@@ -1,0 +1,98 @@
+{
+  "analysis": "ASPIRE-inspired raw-sequence Transformer challenger",
+  "status": "post-hoc external-method-inspired experiment",
+  "exact_ASPIRE_replication": false,
+  "purpose": "Test whether raw high-frequency sequence representation recovers pre-fault information lost by 1-minute aggregation.",
+  "reference_DOI": "10.1109/ACCESS.2026.3711010",
+  "seed": 42,
+  "sensors": [
+    "TP2",
+    "TP3",
+    "H1",
+    "DV_pressure",
+    "Reservoirs",
+    "Oil_temperature",
+    "Motor_current",
+    "COMP",
+    "DV_eletric",
+    "Towers",
+    "MPG",
+    "LPS"
+  ],
+  "window_samples": 100,
+  "approx_window_minutes": 16.666666666666668,
+  "warning_horizon_hours": 2,
+  "training_normal_stride": 10,
+  "training_event_stride": 1,
+  "eval_stride": 1,
+  "epochs": 8,
+  "batch_size": 256,
+  "device": "cuda",
+  "trainable_parameters": 74499,
+  "split": {
+    "train_end": "2020-06-03 08:00:00",
+    "F03_stream_start": "2020-06-03 08:00:00",
+    "F03_warning_start": "2020-06-05 08:00:00",
+    "F03_fault_start": "2020-06-05 10:00:00",
+    "F03_fault_end": "2020-06-07 14:30:00",
+    "F04_stream_start": "2020-07-13 12:30:00",
+    "F04_warning_start": "2020-07-15 12:30:00",
+    "F04_fault_start": "2020-07-15 14:30:00",
+    "F04_fault_end": "2020-07-15 19:00:00"
+  },
+  "training_class_counts": [
+    40591,
+    1324,
+    11115
+  ],
+  "selected_warning_threshold_from_F03": 0.8,
+  "persistence_minutes": 3,
+  "F03_development": {
+    "warning": {
+      "precision_argmax": 0.0493739664540515,
+      "recall_argmax": 0.2878787878787879,
+      "f1_argmax": 0.0842911877394636,
+      "average_precision": 0.04504587364500077,
+      "roc_auc": 0.7841788182572536
+    },
+    "fault": {
+      "precision_argmax": 0.285451197053407,
+      "recall_argmax": 0.009056383289512124,
+      "f1_argmax": 0.017555782081775967,
+      "average_precision": 0.866256394892513,
+      "roc_auc": 0.9335419956378185
+    },
+    "operational_warning": {
+      "threshold": 0.8,
+      "persistent_warning_detected": 1,
+      "first_persistent_warning_time": "2020-06-05 09:59:54",
+      "warning_lead_minutes": 0.1,
+      "false_warning_episodes": 47,
+      "false_warning_episodes_per_day": 24.474445515911285
+    }
+  },
+  "F04_post_hoc_exploratory": {
+    "warning": {
+      "precision_argmax": 0.0,
+      "recall_argmax": 0.0,
+      "f1_argmax": 0.0,
+      "average_precision": 0.047846647413884696,
+      "roc_auc": 0.4608685808833652
+    },
+    "fault": {
+      "precision_argmax": 0.6584601611459265,
+      "recall_argmax": 0.966491458607096,
+      "f1_argmax": 0.7832800851970181,
+      "average_precision": 0.9617376318551127,
+      "roc_auc": 0.9932648175508264
+    },
+    "operational_warning": {
+      "threshold": 0.8,
+      "persistent_warning_detected": 0,
+      "first_persistent_warning_time": null,
+      "warning_lead_minutes": null,
+      "false_warning_episodes": 2,
+      "false_warning_episodes_per_day": 1.550471063257066
+    }
+  }
+}
